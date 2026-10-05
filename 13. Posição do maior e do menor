@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+
+    int vetor[5];
+
+    int maior;
+    int menor;
+
+    int posMaior;
+    int posMenor;
+
+    for (int i = 0; i < 5; i++) {
+        printf("Digite um valor: ");
+        scanf("%d", &vetor[i]);
+    }
+
+    maior = vetor[0];
+    menor = vetor[0];
+
+    posMaior = 0;
+    posMenor = 0;
+
+    for (int i = 1; i < 5; i++) {
+
+        if (vetor[i] > maior) {
+            maior = vetor[i];
+            posMaior = i;
+        }
+
+        if (vetor[i] < menor) {
+            menor = vetor[i];
+            posMenor = i;
+        }
+    }
+
+    printf("Maior valor: %d\n", maior);
+    printf("Posicao do maior: %d\n", posMaior);
+
+    printf("Menor valor: %d\n", menor);
+    printf("Posicao do menor: %d\n", posMenor);
+
+    return 0;
+}
